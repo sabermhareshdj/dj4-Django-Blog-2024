@@ -2,6 +2,11 @@
 <p>{{post.content|safe}}</p>
 <p>{{post.create_date}}</p>
 <p>{{post.author}}</p>
+<ul>
+    {% for tag in post.tags.all %}
+        <li> {{tag}} </li>
+    {% endfor %}
+</ul>
 <img src="{{post.image.url}}" alt="">
 <hr>
 <h3> Comments</h3>
