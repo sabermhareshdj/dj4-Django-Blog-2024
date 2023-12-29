@@ -58,7 +58,7 @@ class PostUpdate(UpdateView):
 
     
 
-# def delete_post(request,post_id):
+# def delete_post(request,post_id):git
     # data = Post.objects.get(id=post_id)
     # data.delete()
     # return redirect('/blog')
