@@ -12,12 +12,15 @@ class PostList(ListView):   # template django default : post_list
     model = Post            # context django default : post_list , object_list
 
 
-# def post_detail(request,post_id):
-    # data = Post.objects.get(id=post_id)
-    # return render(request,'post_detail.html',{'post':data})
+def post_detail(request,pk):
+     data = Post.objects.get(id=pk)
+     return render(request,'blog/post_detail.html',{'post':data})
 
-class PostDetail(DetailView):
-    model = Post
+#class PostDetail(DetailView):
+#    model = Post
+
+#def add_comment(request):
+#    pass
 
 
 # def post_new(request):
